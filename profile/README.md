@@ -4,10 +4,11 @@
 
 # bitQoin
 
-**Quantum-Resistant Solana Vault Infrastructure**
+**The World's First Quantum-Proof Shield for Your Coins**
 
-*Qonjoint: The dual-key protocol built for the post-quantum era*
+*Qonjoint: The dual-key protocol that makes your vault untouchable*
 
+[![Website](https://img.shields.io/badge/website-bitqoin.org-F7931A?style=flat-square)](https://bitqoin.org)
 [![X](https://img.shields.io/badge/X-%40bitqoinorg-000000?style=flat-square&logo=x)](https://x.com/bitqoinorg)
 [![GitHub](https://img.shields.io/badge/GitHub-bitqoinorg-181717?style=flat-square&logo=github)](https://github.com/bitqoinorg)
 [![License](https://img.shields.io/badge/license-MIT-F7931A?style=flat-square)](https://github.com/bitqoinorg/wallet/blob/main/LICENSE)
@@ -19,9 +20,7 @@
 
 ## What is bitQoin
 
-bitQoin is a non-custodial Solana wallet that implements the **Qonjoint protocol**, a dual-key architecture designed to withstand both classical and quantum adversaries.
-
-A single compromised key is never enough. Both keys must sign together. No exceptions.
+bitQoin is the world's first quantum-proof shield for your coins. Built on Solana, it implements the **Qonjoint protocol**: a dual-key architecture where a single compromised key can never move your funds. Both keys must sign. No exceptions.
 
 ---
 
@@ -51,25 +50,38 @@ A single compromised key is never enough. Both keys must sign together. No excep
 
 ## Qonjoint Architecture
 
+How a Qonjoint vault works: two independent keys are required to authorize every transaction. Neither key alone can move funds. Both must sign. The Solana runtime enforces this at the validator level.
+
 ```mermaid
 flowchart LR
     classDef key fill:#1a1a1a,color:#F7931A,stroke:#F7931A,stroke-width:2px
     classDef vault fill:#F7931A,color:#1a1a1a,stroke:none
     classDef chain fill:#0a1a0a,color:#90ee90,stroke:#1a5a1a,stroke-width:2px
+    classDef reject fill:#3a0a0a,color:#ff6b6b,stroke:#7a1a1a,stroke-width:2px
 
-    KA(["Key A"]):::key
-    KB(["Key B"]):::key
-    V(["Qonjoint Vault"]):::vault
-    S(["Solana"]):::chain
+    KA(["Key A
+Your primary device"]):::key
+    KB(["Key B
+Your secondary device"]):::key
+    V(["Qonjoint Vault
+Both keys required to sign"]):::vault
+    S(["Solana Network
+Transaction confirmed on-chain"]):::chain
+    R(["Rejected
+One key is not enough"]):::reject
 
-    KA --> V
-    KB --> V
-    V --> S
+    KA -->|"signs"| V
+    KB -->|"signs"| V
+    V -->|"both present"| S
+    V -. "missing one key" .-> R
 
-    click KA "https://github.com/bitqoinorg/protocol" "Protocol spec"
-    click V "https://github.com/bitqoinorg/wallet" "Wallet repo"
+    click V "https://github.com/bitqoinorg/wallet" "Open wallet repo"
     click S "https://solana.com" "Solana"
+    click KA "https://github.com/bitqoinorg/protocol" "Read the protocol spec"
+    click KB "https://github.com/bitqoinorg/protocol" "Read the protocol spec"
 ```
+
+> Both keys live on separate devices. Losing one does not compromise the other.
 
 ---
 
@@ -116,6 +128,6 @@ flowchart LR
 
 **Built without compromise.**
 
-[x.com/bitqoinorg](https://x.com/bitqoinorg) · [github.com/bitqoinorg](https://github.com/bitqoinorg)
+[bitqoin.org](https://bitqoin.org) · [x.com/bitqoinorg](https://x.com/bitqoinorg) · [github.com/bitqoinorg](https://github.com/bitqoinorg)
 
 </div>
