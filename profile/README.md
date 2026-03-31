@@ -1,12 +1,8 @@
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/bitqoinorg/wallet/main/public/favicon.png" width="72" height="72" alt="bitQoin" />
+<img src="https://raw.githubusercontent.com/bitqoinorg/.github/main/profile/bitqoin.png" width="600" alt="bitQoin" />
 
-# bitQoin
-
-**The World's First**<br/>
-**Quantum-Proof**<br/>
-**Shield for Your Coins**
+# The World's First Quantum-Proof Shield for Your Coins
 
 *Qonjoint: The dual-key protocol that makes your vault untouchable*
 
