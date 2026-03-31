@@ -6,7 +6,7 @@
 
 **Quantum-Resistant Solana Vault Infrastructure**
 
-*Qonjoint — The 2-of-2 multisig protocol built for the post-quantum era*
+*Qonjoint — The dual-key protocol built for the post-quantum era*
 
 [![X](https://img.shields.io/badge/X-%40bitqoinorg-000000?style=flat&logo=x)](https://x.com/bitqoinorg)
 [![GitHub](https://img.shields.io/badge/GitHub-bitqoinorg-181717?style=flat&logo=github)](https://github.com/bitqoinorg)
@@ -19,7 +19,7 @@
 
 ## What is bitQoin
 
-bitQoin is a non-custodial Solana wallet that implements the **Qonjoint protocol** — a 2-of-2 multisig architecture designed to withstand both classical and quantum adversaries.
+bitQoin is a non-custodial Solana wallet that implements the **Qonjoint protocol** — a dual-key architecture designed to withstand both classical and quantum adversaries.
 
 A single compromised key is never enough. Both keys must sign together. No exceptions.
 
@@ -86,7 +86,7 @@ sequenceDiagram
     participant S as ⛓️ Solana
 
     U->>+V: Open vault with Key A + Key B
-    V->>V: Verify 2-of-2 key pair integrity
+    V->>V: Verify Qonjoint key pair integrity
     V-->>U: Vault unlocked ✓
 
     U->>+V: Initiate send transaction
@@ -125,7 +125,7 @@ graph LR
 
     W --> D(["🌐 bitqoinorg.github.io/wallet"]):::live
     API --> H(["🔌 Helius WebSocket"]):::repo
-    P --> SPEC(["📐 2-of-2 Multisig Spec"]):::repo
+    P --> SPEC(["📐 Qonjoint Spec"]):::repo
 
     click ORG "https://github.com/bitqoinorg" "bitQoin organization"
     click W "https://github.com/bitqoinorg/wallet" "Wallet repository"
@@ -134,7 +134,7 @@ graph LR
     click GH "https://github.com/bitqoinorg/.github" "Org profile"
     click D "https://bitqoinorg.github.io/wallet" "Live wallet"
     click H "https://www.helius.dev" "Helius RPC"
-    click SPEC "https://github.com/bitqoinorg/protocol" "Full specification"
+    click SPEC "https://github.com/bitqoinorg/protocol" "Qonjoint specification"
 ```
 
 ---
@@ -150,7 +150,7 @@ timeline
                : Express API scaffold
                : Vite React frontend
     section Core Protocol
-        Q1 2026 : Qonjoint 2-of-2 multisig
+        Q1 2026 : Qonjoint protocol
                : Keypair generation vault
                : Helius RPC integration
                : Solana transaction signing
@@ -188,7 +188,7 @@ flowchart LR
         direction TB
         D1["Key A lives<br/>on cold device"]:::defense
         D2["Key B lives<br/>on separate device"]:::defense
-        D3["2-of-2 AND gate<br/>Both required always"]:::defense
+        D3["Qonjoint AND gate<br/>Both required always"]:::defense
         D4["No server custody<br/>100% self-sovereign"]:::defense
     end
 
@@ -213,7 +213,7 @@ flowchart LR
 | Frontend | React 18 · Vite · Tailwind CSS · TypeScript |
 | Backend | Express 5 · Node.js · Pino |
 | Blockchain | Solana · @solana/web3.js · Helius RPC |
-| Wallet | Qonjoint 2-of-2 multisig protocol |
+| Wallet | Qonjoint protocol |
 | i18n | EN · JA · ZH · DE · ES · AR |
 | Explorer | Orb Markets |
 | Deploy | GitHub Pages · bitqoinorg.github.io |
