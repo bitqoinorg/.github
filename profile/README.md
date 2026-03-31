@@ -4,7 +4,9 @@
 
 # bitQoin
 
-**The World's First Quantum-Proof Shield for Your Coins**
+**The World's First**<br/>
+**Quantum-Proof**<br/>
+**Shield for Your Coins**
 
 *Qonjoint: The dual-key protocol that makes your vault untouchable*
 
