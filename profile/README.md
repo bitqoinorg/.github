@@ -220,6 +220,31 @@ flowchart LR
 
 ---
 
+## Team
+
+<table align="center">
+  <tr>
+    <td align="center" width="200">
+      <a href="https://github.com/kaiming-lang">
+        <img src="https://avatars.githubusercontent.com/u/264678797?v=4" width="80" height="80" style="border-radius:50%" alt="Kai" /><br/>
+        <strong>Kai</strong><br/>
+        <sub><code>@kaiming-lang</code></sub><br/>
+        <sub>quant · founder</sub>
+      </a>
+    </td>
+    <td align="center" width="200">
+      <a href="https://github.com/apps/bitqoiner">
+        <img src="https://avatars.githubusercontent.com/in/3238072?v=4" width="80" height="80" style="border-radius:50%" alt="bitqoiner" /><br/>
+        <strong>bitqoiner</strong><br/>
+        <sub><code>@bitqoiner[bot]</code></sub><br/>
+        <sub>automated commit assistant</sub>
+      </a>
+    </td>
+  </tr>
+</table>
+
+---
+
 <div align="center">
 
 **Built without compromise.**
