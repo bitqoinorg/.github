@@ -1,6 +1,6 @@
-<div align="center">
+<img src="https://raw.githubusercontent.com/bitqoinorg/.github/main/profile/bitqoin.png" width="100%" alt="bitQoin" />
 
-<img src="https://raw.githubusercontent.com/bitqoinorg/.github/main/profile/bitqoin.png" width="600" alt="bitQoin" />
+<div align="center">
 
 # The World's First Quantum-Proof Shield for Your Coins
 
