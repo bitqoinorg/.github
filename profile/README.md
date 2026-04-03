@@ -34,7 +34,7 @@ bitQoin is the world's first quantum-proof shield for your coins. Built on Solan
     </td>
     <td>
       <a href="https://github.com/bitqoinorg/api"><strong>api</strong></a><br/>
-      <sub>Express · Helius RPC · Node.js</sub><br/>
+      <sub>Express · Solana · EVM · Node.js</sub><br/>
       <sub>private</sub>
     </td>
     <td>
@@ -49,13 +49,14 @@ bitQoin is the world's first quantum-proof shield for your coins. Built on Solan
 
 ## Qonjoint Architecture
 
-How a Qonjoint vault works: two independent keys are required to authorize every transaction. Neither key alone can move funds. Both must sign. The chain enforces this at the protocol level.
+How a Qonjoint vault works: two independent keys are required to authorize every transaction. Neither key alone can move funds. Both must sign. Each chain enforces this at the protocol level — Solana via native multisig, Ethereum via Gnosis Safe 2-of-2.
 
 ```mermaid
 flowchart LR
     classDef key fill:#1a1a1a,color:#F7931A,stroke:#F7931A,stroke-width:2px
     classDef vault fill:#F7931A,color:#1a1a1a,stroke:none
-    classDef chain fill:#0a1a0a,color:#90ee90,stroke:#1a5a1a,stroke-width:2px
+    classDef sol fill:#120d1f,color:#9945FF,stroke:#9945FF,stroke-width:2px
+    classDef eth fill:#0d0d1f,color:#627EEA,stroke:#627EEA,stroke-width:2px
     classDef reject fill:#3a0a0a,color:#ff6b6b,stroke:#7a1a1a,stroke-width:2px
 
     KA(["Key A
@@ -64,14 +65,17 @@ Your primary device"]):::key
 Your secondary device"]):::key
     V(["Qonjoint Vault
 Both keys required to sign"]):::vault
-    S(["Solana or Ethereum
-Transaction confirmed on-chain"]):::chain
+    SOL(["Solana
+Native 2-of-2 multisig"]):::sol
+    ETH(["Ethereum
+Gnosis Safe 2-of-2"]):::eth
     R(["Rejected
 One key is not enough"]):::reject
 
     KA -->|"signs"| V
     KB -->|"signs"| V
-    V -->|"both present"| S
+    V -->|"SOL path"| SOL
+    V -->|"EVM path"| ETH
     V -. "missing one key" .-> R
 
     click V "https://github.com/bitqoinorg/wallet" "Open wallet repo"
@@ -89,7 +93,8 @@ One key is not enough"]):::reject
 |---|---|
 | Frontend | React 18, Vite, Tailwind CSS, TypeScript |
 | Backend | Express 5, Node.js, Pino |
-| Blockchain | Solana, Ethereum (EVM), @solana/web3.js, public RPC |
+| Blockchain (SOL) | Solana, @solana/web3.js, native 2-of-2 multisig |
+| Blockchain (EVM) | Ethereum, ethers.js, Gnosis Safe 2-of-2, public RPC |
 | Vault | Qonjoint protocol |
 | i18n | EN, JA, ZH, DE, ES, AR |
 | Explorer | Orb Markets |
