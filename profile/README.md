@@ -11,6 +11,7 @@
 [![GitHub](https://img.shields.io/badge/GitHub-bitqoinorg-181717?style=flat-square&logo=github)](https://github.com/bitqoinorg)
 [![License](https://img.shields.io/badge/license-MIT-F7931A?style=flat-square)](https://github.com/bitqoinorg/wallet/blob/main/LICENSE)
 [![Built on Solana](https://img.shields.io/badge/Built%20on-Solana-9945FF?style=flat-square&logo=solana)](https://solana.com)
+[![Built on Ethereum](https://img.shields.io/badge/Built%20on-Ethereum-627EEA?style=flat-square&logo=ethereum)](https://ethereum.org)
 
 </div>
 
@@ -18,7 +19,7 @@
 
 ## What is bitQoin
 
-bitQoin is the world's first quantum-proof shield for your coins. Built on Solana, it implements the **Qonjoint protocol**: a dual-key architecture where a single compromised key can never move your funds. Both keys must sign. No exceptions.
+bitQoin is the world's first quantum-proof shield for your coins. Built on Solana and Ethereum, it implements the **Qonjoint protocol**: a dual-key architecture where a single compromised key can never move your funds. Both keys must sign. No exceptions.
 
 ---
 
@@ -48,7 +49,7 @@ bitQoin is the world's first quantum-proof shield for your coins. Built on Solan
 
 ## Qonjoint Architecture
 
-How a Qonjoint vault works: two independent keys are required to authorize every transaction. Neither key alone can move funds. Both must sign. The Solana runtime enforces this at the validator level.
+How a Qonjoint vault works: two independent keys are required to authorize every transaction. Neither key alone can move funds. Both must sign. The chain enforces this at the protocol level.
 
 ```mermaid
 flowchart LR
@@ -63,7 +64,7 @@ Your primary device"]):::key
 Your secondary device"]):::key
     V(["Qonjoint Vault
 Both keys required to sign"]):::vault
-    S(["Solana Network
+    S(["Solana or Ethereum
 Transaction confirmed on-chain"]):::chain
     R(["Rejected
 One key is not enough"]):::reject
@@ -74,7 +75,6 @@ One key is not enough"]):::reject
     V -. "missing one key" .-> R
 
     click V "https://github.com/bitqoinorg/wallet" "Open wallet repo"
-    click S "https://solana.com" "Solana"
     click KA "https://github.com/bitqoinorg/protocol" "Read the protocol spec"
     click KB "https://github.com/bitqoinorg/protocol" "Read the protocol spec"
 ```
@@ -89,7 +89,7 @@ One key is not enough"]):::reject
 |---|---|
 | Frontend | React 18, Vite, Tailwind CSS, TypeScript |
 | Backend | Express 5, Node.js, Pino |
-| Blockchain | Solana, @solana/web3.js, Helius RPC |
+| Blockchain | Solana, Ethereum (EVM), @solana/web3.js, public RPC |
 | Vault | Qonjoint protocol |
 | i18n | EN, JA, ZH, DE, ES, AR |
 | Explorer | Orb Markets |
