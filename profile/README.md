@@ -7,7 +7,7 @@
 *Qonjoint: The dual-key protocol that makes your vault untouchable*
 
 [![Website](https://img.shields.io/badge/website-bitqoin.org-F7931A?style=flat-square)](https://bitqoin.org)
-[![X](https://img.shields.io/badge/X-%40bitqoinorg-000000?style=flat-square&logo=x)](https://x.com/bitqoinorg)
+[![X](https://img.shields.io/badge/X-%40thebitqoin-000000?style=flat-square&logo=x)](https://x.com/thebitqoin)
 [![GitHub](https://img.shields.io/badge/GitHub-bitqoinorg-181717?style=flat-square&logo=github)](https://github.com/bitqoinorg)
 [![License](https://img.shields.io/badge/license-MIT-F7931A?style=flat-square)](https://github.com/bitqoinorg/wallet/blob/main/LICENSE)
 [![Built on Solana](https://img.shields.io/badge/Built%20on-Solana-9945FF?style=flat-square&logo=solana)](https://solana.com)
@@ -49,7 +49,7 @@ bitQoin is the world's first quantum-resistant shield for your coins. Built on S
 
 ## Qonjoint Architecture
 
-How a Qonjoint vault works: two independent keys are required to authorize every transaction. Neither key alone can move funds. Both must sign. Each chain enforces this at the protocol level — Solana via native multisig, Ethereum via Gnosis Safe 2-of-2.
+How a Qonjoint vault works: two independent keys are required to authorize every transaction. Neither key alone can move funds. Both must sign. Each chain enforces this at the protocol level: Solana via native multisig, Ethereum via Gnosis Safe 2-of-2.
 
 ```mermaid
 flowchart LR
@@ -131,6 +131,6 @@ One key is not enough"]):::reject
 
 **Built without compromise.**
 
-[bitqoin.org](https://bitqoin.org) · [x.com/bitqoinorg](https://x.com/bitqoinorg) · [github.com/bitqoinorg](https://github.com/bitqoinorg)
+[bitqoin.org](https://bitqoin.org) · [x.com/thebitqoin](https://x.com/thebitqoin) · [github.com/bitqoinorg](https://github.com/bitqoinorg)
 
 </div>
