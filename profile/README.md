@@ -2,7 +2,7 @@
 
 <div align="center">
 
-# The World's First Quantum-Proof Shield for Your Coins
+# The World's First Quantum-Resistant Shield for Your Coins
 
 *Qonjoint: The dual-key protocol that makes your vault untouchable*
 
@@ -19,7 +19,7 @@
 
 ## What is bitQoin
 
-bitQoin is the world's first quantum-proof shield for your coins. Built on Solana and Ethereum, it implements the **Qonjoint protocol**: a dual-key architecture where a single compromised key can never move your funds. Both keys must sign. No exceptions.
+bitQoin is the world's first quantum-resistant shield for your coins. Built on Solana and Ethereum, it implements the **Qonjoint protocol**: a dual-key architecture where a single compromised key can never move your funds. Both keys must sign. No exceptions.
 
 ---
 
